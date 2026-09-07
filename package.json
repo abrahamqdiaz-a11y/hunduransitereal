@@ -1,0 +1,16 @@
+{
+  "name": "conexion-honduras",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Directorio verificado de proveedores y propiedades en Honduras para la diaspora hondurena.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node build.js",
+    "build:demo": "SITE_DATASET=ejemplo node build.js",
+    "dev": "node scripts/dev.js",
+    "dev:demo": "SITE_DATASET=ejemplo node scripts/dev.js",
+    "admin": "node admin/server.js",
+    "check": "node scripts/check.js"
+  }
+}

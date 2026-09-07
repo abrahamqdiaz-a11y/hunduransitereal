@@ -1,0 +1,45 @@
+{
+  "_nota": "Catálogo de las cosas que el sitio puede comprobar. El texto de 'significa' y 'noSignifica' se muestra tal cual en cada perfil. No agregues comprobaciones que no puedas hacer de verdad.",
+  "registro_legal": {
+    "nombre": "Registro legal del negocio",
+    "significa": "Confirmamos que el negocio existe legalmente: RTN activo y, cuando es sociedad, inscripción en el Registro Mercantil.",
+    "noSignifica": "No significa que el negocio esté al día con sus impuestos ni que tenga solvencia financiera.",
+    "fuenteTipica": "SAR / Registro Mercantil (Cámara de Comercio correspondiente)"
+  },
+  "licencia_profesional": {
+    "nombre": "Colegiación profesional vigente",
+    "significa": "Confirmamos que la persona aparece como colegiada y activa en el colegio profesional que le corresponde, en la fecha indicada.",
+    "noSignifica": "No revisamos expedientes disciplinarios ni la calidad de su trabajo.",
+    "fuenteTipica": "Colegio de Abogados de Honduras (CAH) / Colegio de Arquitectos de Honduras / Colegio de Ingenieros Civiles de Honduras (CICH)"
+  },
+  "direccion_fisica": {
+    "nombre": "Dirección física verificada",
+    "significa": "La dirección que aparece en el perfil existe y corresponde a este proveedor. Indicamos cómo se comprobó (visita, videollamada o comprobación con un tercero en el lugar).",
+    "noSignifica": "No significa que la oficina siga abierta hoy. La comprobación es de la fecha indicada.",
+    "fuenteTipica": "Visita en sitio o videollamada desde el local"
+  },
+  "identidad": {
+    "nombre": "Identidad del responsable",
+    "significa": "Vimos el documento de identidad de la persona responsable y coincide con el nombre que aparece en el registro del negocio.",
+    "noSignifica": "No publicamos el número de identidad. No significa que la persona no tenga antecedentes.",
+    "fuenteTipica": "Documento Nacional de Identificación (DNI) cotejado en videollamada"
+  },
+  "referencias_clientes": {
+    "nombre": "Referencias de clientes contactadas",
+    "significa": "Hablamos directamente con clientes anteriores que el proveedor no eligió por nosotros, y confirmamos que el trabajo existió.",
+    "noSignifica": "No es una calificación. No publicamos opiniones ni estrellas.",
+    "fuenteTipica": "Llamada directa a clientes anteriores"
+  },
+  "propiedad_registral": {
+    "nombre": "Situación registral del inmueble",
+    "significa": "Consultamos el asiento registral en el Instituto de la Propiedad en la fecha indicada y anotamos quién aparece como titular y qué gravámenes constaban.",
+    "noSignifica": "No es un estudio de dominio completo ni sustituye al abogado que usted debe contratar. Un inmueble puede cambiar de situación al día siguiente.",
+    "fuenteTipica": "Instituto de la Propiedad (IP)"
+  },
+  "vendedor_es_titular": {
+    "nombre": "El vendedor aparece como titular",
+    "significa": "El nombre de quien vende coincide con el titular que consta en el registro, o presenta poder inscrito para vender.",
+    "noSignifica": "No significa que no existan terceros con derechos sobre el inmueble.",
+    "fuenteTipica": "Instituto de la Propiedad (IP)"
+  }
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "constructores",
+    "nombre": "Constructores y contratistas",
+    "singular": "Constructor o contratista",
+    "descripcion": "Empresas y maestros de obra que construyen casas, hacen remodelaciones y levantan muros perimetrales.",
+    "queRevisamos": ["registro_legal", "direccion_fisica", "identidad"],
+    "queRevisamosOpcional": ["licencia_profesional"],
+    "advertencia": "Un constructor puede estar legalmente registrado y aun así hacer mal trabajo. El registro no es garantía de calidad."
+  },
+  {
+    "slug": "abogados",
+    "nombre": "Abogados de bienes raíces",
+    "singular": "Abogado o notario",
+    "descripcion": "Abogados y notarios que hacen traspasos, escrituras, estudios de dominio y trámites en el Instituto de la Propiedad.",
+    "queRevisamos": ["registro_legal", "licencia_profesional", "direccion_fisica", "identidad"],
+    "queRevisamosOpcional": [],
+    "advertencia": "Verificamos que el colegiado exista y esté activo en el Colegio de Abogados de Honduras. No evaluamos su desempeño ni su historial disciplinario."
+  },
+  {
+    "slug": "arquitectos-ingenieros",
+    "nombre": "Arquitectos e ingenieros",
+    "singular": "Arquitecto o ingeniero",
+    "descripcion": "Profesionales que hacen planos, cálculo estructural, supervisión de obra y peritajes.",
+    "queRevisamos": ["registro_legal", "licencia_profesional", "direccion_fisica", "identidad"],
+    "queRevisamosOpcional": [],
+    "advertencia": "Verificamos la colegiación (CAH o CICH). No evaluamos la calidad técnica de sus proyectos."
+  },
+  {
+    "slug": "administracion-propiedades",
+    "nombre": "Administración de propiedades",
+    "singular": "Administrador de propiedades",
+    "descripcion": "Personas y empresas que cuidan, alquilan y dan mantenimiento a propiedades de dueños que viven fuera del país.",
+    "queRevisamos": ["registro_legal", "direccion_fisica", "identidad"],
+    "queRevisamosOpcional": ["referencias_clientes"],
+    "advertencia": "Esta categoría maneja su dinero y sus llaves sin que usted esté presente. Lea con cuidado qué fue revisado y qué no."
+  },
+  {
+    "slug": "envios-vehiculos",
+    "nombre": "Envíos e importación de vehículos",
+    "singular": "Empresa de envíos",
+    "descripcion": "Empresas de carga, mudanza y trámite aduanero para vehículos y menaje de casa.",
+    "queRevisamos": ["registro_legal", "direccion_fisica", "identidad"],
+    "queRevisamosOpcional": [],
+    "advertencia": "No verificamos tiempos de entrega ni el estado en que llega la carga."
+  },
+  {
+    "slug": "salud",
+    "nombre": "Salud",
+    "singular": "Proveedor de salud",
+    "descripcion": "Médicos, clínicas y laboratorios.",
+    "queRevisamos": ["registro_legal", "licencia_profesional", "direccion_fisica", "identidad"],
+    "queRevisamosOpcional": [],
+    "advertencia": "",
+    "proximamente": true
+  },
+  {
+    "slug": "seguros",
+    "nombre": "Seguros",
+    "singular": "Agente o correduría de seguros",
+    "descripcion": "Agentes y corredurías de seguros de vida, vivienda y vehículos.",
+    "queRevisamos": ["registro_legal", "licencia_profesional", "direccion_fisica", "identidad"],
+    "queRevisamosOpcional": [],
+    "advertencia": "",
+    "proximamente": true
+  }
+]

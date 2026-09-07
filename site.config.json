@@ -1,0 +1,49 @@
+{
+  "_nota": "Todo lo que aparece en el sitio sale de este archivo. Revisa cada campo marcado con PENDIENTE antes de publicar. Ver CONTENIDO-PENDIENTE.md.",
+
+  "nombre": "VerificaHN",
+  "nombreLargo": "VerificaHN — Directorio verificado de Honduras",
+  "descripcion": "Directorio de constructores, abogados, arquitectos y propiedades en Honduras. Revisamos registros legales y colegiaciones, y decimos exactamente qué revisamos y qué no.",
+  "url": "https://ejemplo-pendiente.com",
+  "idioma": "es-HN",
+  "pais": "HN",
+
+  "operador": {
+    "_nota": "PENDIENTE: quién está detrás del sitio. La gente no confía en un sitio anónimo. Sin esto, la página /acerca queda incompleta a propósito.",
+    "razonSocial": "",
+    "responsable": "",
+    "ubicacion": "",
+    "desde": ""
+  },
+
+  "contacto": {
+    "_nota": "PENDIENTE: número de WhatsApp real del sitio, en formato internacional sin signos (ej. 50499998888). Si se deja vacío, el sitio no muestra botones de contacto propios.",
+    "whatsapp": "",
+    "correo": ""
+  },
+
+  "webhooks": {
+    "_nota": "PENDIENTE: URLs de webhook de Make.com. Si quedan vacías, los formularios muestran un aviso honesto en vez de fingir que se enviaron.",
+    "reportes": "",
+    "registroProveedor": "",
+    "contactoGeneral": ""
+  },
+
+  "verificacion": {
+    "vigenciaMeses": 12,
+    "_nota": "Una verificación caduca a los 12 meses. Después el perfil se muestra como 'verificación vencida', no como verificado."
+  },
+
+  "precios": {
+    "_nota": "PENDIENTE: define tus precios antes de publicarlos. Si 'publicar' queda en false, el sitio no muestra ningún precio y dice honestamente que el costo se conversa por WhatsApp. No inventes precios.",
+    "publicar": false,
+    "verificacionInicial": "",
+    "renovacionAnual": "",
+    "listadoBasico": ""
+  },
+
+  "analitica": {
+    "_nota": "Opcional. Si se deja vacío no se carga ningún script de terceros (mejor para conexiones lentas y para la privacidad).",
+    "plausibleDominio": ""
+  }
+}

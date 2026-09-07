@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "casa-ejemplo-san-pedro-sula",
+    "titulo": "Casa de ejemplo en San Pedro Sula",
+    "tipo": "casa",
+    "estado": "verificado",
+    "precio": { "monto": 78000, "moneda": "USD" },
+    "departamento": "Cortés",
+    "ciudad": "San Pedro Sula",
+    "sector": "Sector de ejemplo",
+    "areaTerrenoV2": 210,
+    "areaConstruccionM2": 118,
+    "habitaciones": 3,
+    "banos": 2,
+    "descripcion": "DATOS DE EJEMPLO. Este anuncio no corresponde a una propiedad real y existe solamente para probar el diseño del sitio.",
+    "caracteristicas": ["Agua municipal", "Energía conectada", "Calle pavimentada"],
+    "fotos": [],
+    "vendedor": {
+      "tipo": "proveedor",
+      "proveedor": "constructora-ejemplo-spss",
+      "nombre": "Constructora Ejemplo S. de R.L.",
+      "whatsapp": "50400000001"
+    },
+    "verificacion": {
+      "fecha": "2026-06-12",
+      "revisadoPor": "Equipo VerificaHN",
+      "comprobaciones": [
+        { "tipo": "propiedad_registral", "estado": "confirmado", "detalle": "Asiento registral de ejemplo consultado el 12 de junio de 2026. Sin gravámenes anotados en esa fecha.", "fuente": "Instituto de la Propiedad" },
+        { "tipo": "vendedor_es_titular", "estado": "confirmado", "detalle": "El vendedor aparece como titular en el asiento consultado.", "fuente": "Instituto de la Propiedad" },
+        { "tipo": "direccion_fisica", "estado": "confirmado", "detalle": "La casa existe en la dirección indicada; fotos tomadas en la visita.", "fuente": "Visita en sitio" }
+      ],
+      "noRevisado": [
+        "Estado estructural de la construcción",
+        "Deudas de servicios públicos o impuesto de bienes inmuebles",
+        "Situación registral después de la fecha indicada",
+        "Si el precio es razonable para la zona"
+      ]
+    },
+    "publicado": "2026-06-14"
+  },
+  {
+    "slug": "lote-ejemplo-comayagua",
+    "titulo": "Lote de ejemplo en Comayagua",
+    "tipo": "lote",
+    "estado": "no_verificado",
+    "precio": { "monto": 450000, "moneda": "HNL" },
+    "departamento": "Comayagua",
+    "ciudad": "Comayagua",
+    "sector": "Sector de ejemplo",
+    "areaTerrenoV2": 480,
+    "areaConstruccionM2": null,
+    "habitaciones": null,
+    "banos": null,
+    "descripcion": "DATOS DE EJEMPLO. Este anuncio no corresponde a una propiedad real.",
+    "caracteristicas": ["Acceso por calle de tierra"],
+    "fotos": [],
+    "vendedor": {
+      "tipo": "particular",
+      "proveedor": null,
+      "nombre": "Vendedor de ejemplo",
+      "whatsapp": "50400000005"
+    },
+    "verificacion": null,
+    "publicado": "2026-08-30"
+  }
+]

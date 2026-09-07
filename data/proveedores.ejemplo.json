@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "constructora-ejemplo-spss",
+    "nombre": "Constructora Ejemplo S. de R.L.",
+    "categoria": "constructores",
+    "resumen": "Construcción de vivienda desde cero y muros perimetrales en el valle de Sula.",
+    "descripcion": "DATOS DE EJEMPLO. Este perfil no corresponde a una empresa real y existe solamente para probar el diseño del sitio.",
+    "departamento": "Cortés",
+    "ciudad": "San Pedro Sula",
+    "direccion": "Dirección de ejemplo, San Pedro Sula",
+    "cobertura": ["Cortés", "Santa Bárbara", "Yoro"],
+    "whatsapp": "50400000001",
+    "telefono": "",
+    "sitioWeb": "",
+    "servicios": ["Casa nueva llave en mano", "Muro perimetral", "Remodelación", "Supervisión con reportes por WhatsApp"],
+    "fotos": [],
+    "estado": "verificado",
+    "verificacion": {
+      "fecha": "2026-06-12",
+      "revisadoPor": "Equipo VerificaHN",
+      "comprobaciones": [
+        { "tipo": "registro_legal", "estado": "confirmado", "detalle": "RTN de ejemplo, sociedad inscrita.", "fuente": "Registro Mercantil" },
+        { "tipo": "direccion_fisica", "estado": "confirmado", "detalle": "Visita a la oficina el 12 de junio de 2026.", "fuente": "Visita en sitio" },
+        { "tipo": "identidad", "estado": "confirmado", "detalle": "DNI del representante cotejado con el registro de la sociedad.", "fuente": "Videollamada" },
+        { "tipo": "licencia_profesional", "estado": "no_aplica", "detalle": "La empresa contrata ingeniero colegiado por proyecto; no verificamos a cada uno.", "fuente": "" }
+      ],
+      "noRevisado": [
+        "Calidad de las obras entregadas",
+        "Cumplimiento de plazos y presupuestos",
+        "Situación de pagos con proveedores o trabajadores",
+        "Demandas o juicios pendientes"
+      ]
+    },
+    "enListaDesde": "2026-02-01"
+  },
+  {
+    "slug": "bufete-ejemplo-tegucigalpa",
+    "nombre": "Bufete Ejemplo & Asociados",
+    "categoria": "abogados",
+    "resumen": "Traspasos, escrituras y estudios de dominio para hondureños que compran desde el extranjero.",
+    "descripcion": "DATOS DE EJEMPLO. Este perfil no corresponde a un bufete real.",
+    "departamento": "Francisco Morazán",
+    "ciudad": "Tegucigalpa",
+    "direccion": "Dirección de ejemplo, Tegucigalpa",
+    "cobertura": ["Francisco Morazán", "Comayagua", "El Paraíso"],
+    "whatsapp": "50400000002",
+    "telefono": "",
+    "sitioWeb": "",
+    "servicios": ["Estudio de dominio", "Traspaso de dominio", "Poder para comprar o vender", "Cancelación de gravámenes"],
+    "fotos": [],
+    "estado": "verificado",
+    "verificacion": {
+      "fecha": "2025-04-20",
+      "revisadoPor": "Equipo VerificaHN",
+      "comprobaciones": [
+        { "tipo": "licencia_profesional", "estado": "confirmado", "detalle": "Número de colegiación de ejemplo, activo en la fecha de revisión.", "fuente": "Colegio de Abogados de Honduras" },
+        { "tipo": "registro_legal", "estado": "confirmado", "detalle": "RTN de ejemplo.", "fuente": "SAR" },
+        { "tipo": "direccion_fisica", "estado": "confirmado", "detalle": "Videollamada desde la oficina.", "fuente": "Videollamada" },
+        { "tipo": "identidad", "estado": "confirmado", "detalle": "DNI cotejado.", "fuente": "Videollamada" }
+      ],
+      "noRevisado": [
+        "Expediente disciplinario en el colegio",
+        "Resultado de casos anteriores",
+        "Honorarios cobrados"
+      ]
+    },
+    "enListaDesde": "2025-04-20"
+  },
+  {
+    "slug": "administracion-ejemplo-ceiba",
+    "nombre": "Administración Ejemplo",
+    "categoria": "administracion-propiedades",
+    "resumen": "Cuidado y alquiler de casas de dueños que viven en Estados Unidos.",
+    "descripcion": "DATOS DE EJEMPLO. Este perfil no corresponde a una empresa real.",
+    "departamento": "Atlántida",
+    "ciudad": "La Ceiba",
+    "direccion": "Dirección de ejemplo, La Ceiba",
+    "cobertura": ["Atlántida", "Islas de la Bahía"],
+    "whatsapp": "50400000003",
+    "telefono": "",
+    "sitioWeb": "",
+    "servicios": ["Visitas mensuales con fotos", "Cobro de alquiler", "Pago de servicios", "Mantenimiento menor"],
+    "fotos": [],
+    "estado": "no_verificado",
+    "verificacion": null,
+    "enListaDesde": "2026-08-15"
+  },
+  {
+    "slug": "envios-ejemplo-usa-hn",
+    "nombre": "Envíos Ejemplo",
+    "categoria": "envios-vehiculos",
+    "resumen": "Carga consolidada y trámite aduanero de vehículos.",
+    "descripcion": "DATOS DE EJEMPLO. Este perfil no corresponde a una empresa real.",
+    "departamento": "Cortés",
+    "ciudad": "Puerto Cortés",
+    "direccion": "Dirección de ejemplo, Puerto Cortés",
+    "cobertura": ["Cortés", "Francisco Morazán"],
+    "whatsapp": "50400000004",
+    "telefono": "",
+    "sitioWeb": "",
+    "servicios": ["Importación de vehículo", "Menaje de casa", "Trámite aduanero"],
+    "fotos": [],
+    "estado": "no_verificado",
+    "verificacion": null,
+    "enListaDesde": "2026-09-01"
+  }
+]
