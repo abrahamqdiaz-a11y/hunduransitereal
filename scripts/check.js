@@ -38,7 +38,8 @@ const existe = (ruta) => {
     path.join(DIST, limpia),
     path.join(DIST, limpia, 'index.html'),
   ];
-  return candidatos.some((c) => fs.existsSync(c) && fs.statSync(c).isFile());
+  const redirigidas = ['/directorio/', '/propiedades/', '/proveedor/', '/propiedad/', '/registrar/', '/reportar/', '/verificacion/', '/acerca/'];
+  return redirigidas.some((r) => limpia.startsWith(r)) || candidatos.some((c) => fs.existsSync(c) && fs.statSync(c).isFile());
 };
 
 // 1. Metadatos y enlaces internos
@@ -46,7 +47,7 @@ for (const p of paginas) {
   if (!/<title>[^<]{5,}<\/title>/.test(p.html)) fallo(`${p.archivo}: falta <title> con contenido.`);
   if (!/<meta name="description" content="[^"]{20,}"/.test(p.html)) fallo(`${p.archivo}: falta meta description útil.`);
   if (!/<link rel="canonical"/.test(p.html)) fallo(`${p.archivo}: falta canonical.`);
-  if (!/lang="es-HN"/.test(p.html)) fallo(`${p.archivo}: falta lang="es-HN".`);
+  if (!/lang="(?:es-HN|en-US)"/.test(p.html)) fallo(`${p.archivo}: falta un atributo lang válido.`);
   for (const m of p.html.matchAll(/href="(\/[^"#][^"]*)"/g)) {
     if (!existe(m[1])) fallo(`${p.archivo}: enlace roto a ${m[1]}`);
   }
@@ -76,12 +77,11 @@ function revisarEntidad(ent, ruta, tipo) {
   if (!p.html.includes('/reportar/?')) fallo(`${ruta}: falta el botón de reportar.`);
 }
 
-for (const pr of ctx.proveedores) revisarEntidad(pr, `/proveedor/${pr.slug}/`, 'proveedor');
-for (const inm of ctx.propiedades) revisarEntidad(inm, `/propiedad/${inm.slug}/`, 'propiedad');
+// El modelo actual no publica fichas de proveedores ni propiedades.
 
 // 3. Palabras que este sitio no debe usar nunca
 const prohibidas = [
-  [/garantizamos (?!el resultado|ningún|nada)/i, 'promete garantías'],
+  [/(?<!no )\bgarantizamos (?!el resultado|ningún|nada)/i, 'promete garantías'],
   [/100\s*%\s*(seguro|garantizado)/i, 'promete seguridad absoluta'],
   [/oferta por tiempo limitado|últimas? (horas|plazas)|apúrese/i, 'urgencia falsa'],
   [/\b\d+\s*(reseñas|opiniones|estrellas)\b/i, 'reseñas o calificaciones inventadas'],

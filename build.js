@@ -2,10 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { cargarDatos, ROOT, hoyISO } from './lib/data.js';
 import {
-  paginaInicio, paginasDirectorio, paginaProveedor,
-  paginasPropiedades, paginaPropiedad, paginasGuias,
+  paginaInicio, paginasGuias,
 } from './lib/paginas.js';
 import { paginasEstaticas } from './lib/estaticas.js';
+import { pagina } from './lib/plantilla.js';
 
 const SALIDA = path.join(ROOT, 'dist');
 const dataset = process.env.SITE_DATASET === 'ejemplo' ? 'ejemplo' : 'real';
@@ -56,14 +56,12 @@ function main() {
     process.exit(1);
   }
 
+  const quienes = { ruta: '/quienes-somos/', html: pagina({ ctx, ruta: '/quienes-somos/', titulo: 'Quiénes somos', descripcion: 'Conozca quién coordina la verificación independiente de propiedades en Honduras.', contenido: `<article class="pagina-servicio"><p class="sobrelinea">Responsabilidad visible</p><h1>Quiénes somos</h1>${config.operador?.responsable ? `<h2>${config.operador.responsable}</h2><p>${config.operador.razonSocial || ''} · ${config.operador.ubicacion || ''}</p>` : '<aside class="callout callout--aviso"><strong>[PLACEHOLDER_NOMBRE_Y_FOTO]</strong><p>Falta publicar el nombre, la fotografía y la ubicación reales del responsable.</p></aside>'}<h2>Trabajamos para quien compra</h2><p>No representamos al vendedor. La tarifa no cambia si usted compra o se retira.</p><p><a class="boton boton--whatsapp" href="/contacto/">Contactar</a></p></article>` }) };
   const paginas = [
     paginaInicio(ctx),
-    ...paginasDirectorio(ctx),
-    ...proveedores.map((p) => paginaProveedor(p, ctx)),
-    ...paginasPropiedades(ctx),
-    ...propiedades.map((p) => paginaPropiedad(p, ctx)),
     ...paginasGuias(ctx),
     ...paginasEstaticas(ctx),
+    quienes,
   ];
 
   limpiar(SALIDA);
@@ -87,14 +85,22 @@ function main() {
     '  Cache-Control: public, max-age=2592000',
     '',
   ].join('\n'));
+  fs.writeFileSync(path.join(SALIDA, '_redirects'), [
+    '/propiedades/* /servicios/ 301',
+    '/directorio/* /como-funciona/ 301',
+    '/proveedor/* /como-funciona/ 301',
+    '/propiedad/* /servicios/ 301',
+    '/registrar/* /contacto/ 301',
+    '/reportar/* /contacto/ 301',
+    '/verificacion/* /como-funciona/ 301',
+    '/acerca/* /quienes-somos/ 301',
+  ].join('\n') + '\n');
 
   // Avisos: cosas que faltan para poder publicar de verdad.
   const avisos = [];
   if (!config.url || config.url.includes('ejemplo-pendiente')) avisos.push('site.config.json: falta la URL real del sitio (afecta canonical, sitemap y schema).');
   if (!config.operador?.razonSocial) avisos.push('site.config.json: falta el bloque "operador". La página /acerca/ sale incompleta a propósito.');
   if (!config.contacto?.whatsapp) avisos.push('site.config.json: falta el WhatsApp del sitio.');
-  if (!config.webhooks?.reportes) avisos.push('site.config.json: falta el webhook de reportes. El formulario de reporte no envía nada.');
-  if (!config.webhooks?.registroProveedor) avisos.push('site.config.json: falta el webhook de registro de proveedores.');
   for (const g of guias) {
     for (const p of g.pendiente || []) avisos.push(`Guía ${g.archivo}: ${p}`);
   }
