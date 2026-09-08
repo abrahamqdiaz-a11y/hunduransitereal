@@ -27,7 +27,7 @@ function archivos(dir, lista = []) {
 
 const paginas = archivos(DIST).map((f) => ({
   archivo: path.relative(DIST, f),
-  ruta: '/' + path.relative(DIST, f).replace(/index\.html$/, ''),
+  ruta: '/' + path.relative(DIST, f).replace(/\\/g, '/').replace(/index\.html$/, ''),
   html: fs.readFileSync(f, 'utf8'),
 }));
 
